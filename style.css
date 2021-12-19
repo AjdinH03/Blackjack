@@ -1,16 +1,18 @@
+html{
+    height: 100vh;
+    min-height: 100%;
+}
+
 body{
+    display: flex;
     background-image: url("Images/BlackjackRoyalPairs.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-html{
-    height: 100%;
-}
 
 .flex-container{
     display: flex;
-    background-color: #f1f1f1;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
@@ -19,7 +21,6 @@ html{
 
 .box{
     width: 100%;
-    border: 1px solid red;
     margin: 5px;
     color: #FFD700;
     font-weight: bold;
@@ -36,10 +37,22 @@ html{
     font-size: 30px;
 }
 
-#new-game,#reset{
+#reset,#new-game,#hit,#stay{
+    background-image: url("Images/BlackjackRoyalPairs.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 25px;
-    padding-top: 20px;
+    border: none;
+    color: #FFD700;
+    cursor: pointer;
+    padding: 10px;
 }
+
+@media screen and (max-width: 400px) {
+    body {
+      color: aliceblue;
+    }
+  }
 
 
 
