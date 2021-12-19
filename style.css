@@ -1,0 +1,45 @@
+body{
+    background-image: url("Images/BlackjackRoyalPairs.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html{
+    height: 100%;
+}
+
+.flex-container{
+    display: flex;
+    background-color: #f1f1f1;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.box{
+    width: 100%;
+    border: 1px solid red;
+    margin: 5px;
+    color: #FFD700;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#title{
+    margin-top:90px;
+    font-size: 50px;
+}
+
+#play-prompt{
+    margin-top: 120px;
+    font-size: 30px;
+}
+
+#new-game,#reset{
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+
+
