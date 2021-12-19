@@ -69,6 +69,7 @@ function checkPlayerStatus(){
     if(getHandValue(playerHand) > 21){
         status.innerHTML = "BUST!"
         hit.style.display = "none";
+        stay1.style.display = "none";
         newGame.style.display = "inline-block";
     }else if (getHandValue(playerHand) === 21){
         status.innerHTML = "YOU WIN! BLACKJACK!";
@@ -77,6 +78,7 @@ function checkPlayerStatus(){
     }else if (getHandValue(playerHand) === getHandValue(dealerHand)){
         status.innerHTML = "SPLIT!";
         hit.style.display = "none";
+        stay1.style.display = "none";
         newGame.style.display = "inline-block";
     }
 
@@ -93,10 +95,22 @@ function checkDealerStatus(){
     if(getHandValue(dealerHand) > 21){
         status.innerHTML = "DEALER BUST, YOU WIN!";
         hit.style.display = "none";
+        stay1.style.display = "none";
         newGame.style.display = "inline-block";
     }else if (getHandValue(playerHand) > getHandValue(dealerHand) && getHandValue(playerHand) < 21 && getHandValue(dealerHand) > 16){
         status.innerHTML = "YOU WIN!";
         hit.style.display = "none";
+        stay1.style.display = "none";
+        newGame.style.display = "inline-block";
+    }else if (getHandValue(dealerHand) === 21){
+        status.innerHTML = "DEALER WINS!";
+        hit.style.display = "none";
+        stay1.style.display = "none";
+        newGame.style.display = "inline-block";
+    }else if (getHandValue(playerHand) < getHandValue(dealerHand) && getHandValue(dealerHand) < 21 && getHandValue(playerHand) >= 16){
+        status.innerHTML = "YOU LOSE!";
+        hit.style.display = "none";
+        stay1.style.display = "none";
         newGame.style.display = "inline-block";
     }
 }
